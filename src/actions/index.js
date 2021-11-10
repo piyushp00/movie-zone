@@ -6,4 +6,5 @@
 
 // {
 //     type: 'DECREASE_COUNT'
+//     user:{}
 // } 
