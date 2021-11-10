@@ -9,6 +9,7 @@ import movies from './reducers'
 //create store(by redux)
 const store = createStore(movies);
 console.log('store', store);
+console.log('STATE', store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
