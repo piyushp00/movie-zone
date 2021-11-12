@@ -2,27 +2,30 @@ import React from "react";
 import { data } from "../data";
 import Navbar from "./Navbar";
 import MovieCard from "./MovieCard";
+import {addMovies} from "../actions"
 
 class App extends React.Component {
   componentDidMount() {
-    const {store} = this.props;
+    const { store } = this.props;
 
+    //subscribe to the store
     store.subscribe(() => {
-      console.log('UPDATED');
-      this.setState({});
-    });
-    // make api call
-    //dispatch an action
-    console.log('DISPATCH ACTION');
-    store.dispatch({
-      type: "ADD_MOVIES",
-      movies: data,
+      console.log("UPDATED");
+      this.forceUpdate(); //we should not use this
+      //this.setState({});
     });
 
-    console.log('STATE', this.props.store.getState());
+    // make api call  
+    
+    //dispatch an action
+    console.log("DISPATCH ACTION");
+    store.dispatch(addMovies(data));
+
+    console.log("STATE", this.props.store.getState());
   }
 
   render() {
+    console.log("render");
     const movies = this.props.store.getState();
     return (
       <div className="App">
