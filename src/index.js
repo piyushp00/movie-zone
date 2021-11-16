@@ -1,16 +1,16 @@
 //packages
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createStore } from "redux";
 
 //local files
-import './index.css';
-import App from './components/App';
-import movies from './reducers' 
+import "./index.css";
+import App from "./components/App";
+import movies from "./reducers";
 
 //create store(by redux)
 const store = createStore(movies);
-console.log('store', store);
+console.log("store", store);
 // console.log('BEFORE STATE', store.getState());
 
 // //dispatching action
@@ -21,13 +21,9 @@ console.log('store', store);
 
 // console.log('AFTER STATE', store.getState());
 
-
 ReactDOM.render(
   <React.StrictMode>
     <App store={store} />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-
-
