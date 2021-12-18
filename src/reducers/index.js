@@ -7,7 +7,7 @@ import {
 
 const initialMovieState = {
   list: [],
-  favourites: [],
+  favourites: [] ,
   showFavourites: false,
 };
 
