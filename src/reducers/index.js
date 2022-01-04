@@ -27,7 +27,7 @@ export default function movies(state = initialMovieState, action) {
         list: action.movies,
       };
 
-    case ADD_TO_FAVORITES:
+    case ADD_TO_FAVORITES: 
       return {
         ...state,
         favourites: [action.movie, ...state.favourites],
