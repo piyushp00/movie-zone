@@ -12,7 +12,7 @@ class App extends React.Component {
     store.subscribe(() => {
       console.log("UPDATED");
       this.forceUpdate(); //we should not use this
-      //this.setState({});
+      //this.setState({}); 
     });
 
     // make api call
