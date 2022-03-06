@@ -12,7 +12,7 @@ class App extends React.Component {
     store.subscribe(() => {
       console.log("UPDATED");
       this.forceUpdate(); //we should not use this
-      //this.setState({}); 
+      //this.setState({});
     });
 
     // make api call
@@ -25,9 +25,9 @@ class App extends React.Component {
   }
 
   isMovieFavorite = (movie) => {
-    const { favourites } = this.props.store.getState();
+    const { movies } = this.props.store.getState();
 
-    const index = favourites.indexOf(movie);
+    const index = movies.favourites.indexOf(movie);
 
     if (index !== -1) {
       //found the movie
@@ -42,7 +42,8 @@ class App extends React.Component {
 
   render() {
     console.log("render", this.props.store.getState());
-    const { list, favourites, showFavourites } = this.props.store.getState(); //{list: {}, favourites: []}
+    const { movies } = this.props.store.getState(); //{ movies: {}, search: {} }
+    const { list, favourites, showFavourites } = movies; 
 
     const displayMovies = showFavourites ? favourites : list;
 
@@ -84,4 +85,4 @@ class App extends React.Component {
   }
 }
 
-export default App; 
+export default App;

@@ -6,10 +6,10 @@ import { createStore } from "redux";
 //local files
 import "./index.css";
 import App from "./components/App";
-import movies from "./reducers";
+import rootReducer from "./reducers";
 
 //create store(by redux)
-const store = createStore(movies);
+const store = createStore(rootReducer);
 console.log("store", store);
 // console.log('BEFORE STATE', store.getState());
 
