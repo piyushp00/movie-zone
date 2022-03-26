@@ -19,7 +19,7 @@ export function movies(state = initialMovieState, action) {
   //     return {
   //         ...state,
   //         list: action.movies
-  //     }
+  //     } 
   // }
   // return state;
 
@@ -66,10 +66,10 @@ export function search(state = initialSearchState, action) {
   return state;
 }
 
-const initialRootState = {
-  movies: initialMovieState,
-  search: initialSearchState,
-};
+// const initialRootState = {
+//   movies: initialMovieState,
+//   search: initialSearchState,
+// };
 
 //rootReducer
 // export default function rootReducer(state = initialRootState, action) {
@@ -77,10 +77,9 @@ const initialRootState = {
 //     movies: movies(state.movies, action),
 //     search: search(state.search, action),
 //   };
-// }
+// } 
 
 export default combineReducers({
   movies,
   search
 });
- 
